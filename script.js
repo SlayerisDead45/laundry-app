@@ -88,7 +88,7 @@ function bookNow() {
   // i am keeping my existing emailjs keys here
   emailjs.init("agrNY7qKO0HwF4zFY");
 
-  emailjs.send("service_kn6noyx", "template_eumkl9w", templateParams)
+  emailjs.send("service_x2ogmxn", "template_eumkl9w", templateParams)
     .then(function() {
       alert("Booking confirmed! Email sent successfully.");
       // i am resetting everything after booking
