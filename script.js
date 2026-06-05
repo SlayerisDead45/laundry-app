@@ -11,11 +11,13 @@ function addItem(name, price) {
 
 // i am doing this to remove a service from the cart
 function removeItem(name, price) {
-  // i learned that findIndex helps me find the item position
-  var index = cartItems.findIndex(function(item) {
-    return item.name === name;
-  });
-
+ var index = -1;
+for (var i = 0; i < cartItems.length; i++) {
+  if (cartItems[i].name === name) {
+    index = i;
+    break;
+  }
+}
   if (index !== -1) {
     cartItems.splice(index, 1);
     totalAmount = totalAmount - price;
