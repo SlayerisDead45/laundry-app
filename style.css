@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #f0f0f0;
+  background-color: #111;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 15px 30px;
+  border-bottom: 2px solid #c9a84c;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #c9a84c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: #c9a84c;
+}
+
+.user-name {
+  font-size: 15px;
+  color: #c9a84c;
+}
+
+/* hero section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  background-color: #181818;
+  gap: 30px;
+}
+
+.hero-left {
+  max-width: 500px;
+}
+
+.hero-left h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #c9a84c;
+}
+
+.hero-left p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #aaa;
+}
+
+.hero-left button {
+  background-color: #c9a84c;
+  color: #111;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero-left button:hover {
+  background-color: #b8943e;
+}
+
+.hero-right img {
+  width: 400px;
+  border-radius: 12px;
+}
+
+/* achievements */
+.achievements {
+  display: flex;
+  justify-content: space-around;
+  background-color: #c9a84c;
+  color: #111;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.achievement {
+  text-align: center;
+}
+
+.achievement h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.achievement p {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+/* booking section */
+.booking {
+  display: flex;
+  gap: 30px;
+  padding: 50px 40px;
+  background-color: #111;
+}
+
+/* left services */
+.services-list {
+  flex: 1;
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #c9a84c;
+}
+
+.services-list h2 {
+  margin-bottom: 20px;
+  color: #c9a84c;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #2a2a2a;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.service-item span {
+  font-size: 15px;
+  color: #f0f0f0;
+}
+
+.btns {
+  display: flex;
+  gap: 8px;
+}
+
+.btns button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* i made add button gold and remove button dark */
+.btns button:first-child {
+  background-color: #c9a84c;
+  color: #111;
+}
+
+.btns button:last-child {
+  background-color: #2a2a2a;
+  color: #c9a84c;
+  border: 1px solid #c9a84c;
+}
+
+.hint {
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* right cart and form */
+.booking-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cart {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #c9a84c;
+}
+
+.cart h2 {
+  margin-bottom: 15px;
+  color: #c9a84c;
+}
+
+#cart-items {
+  min-height: 80px;
+}
+
+#empty-msg {
+  color: #555;
+  font-size: 14px;
+}
+
+.cart hr {
+  margin: 15px 0;
+  border-color: #2a2a2a;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #c9a84c;
+}
+
+/* booking form */
+.book-form {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #c9a84c;
+}
+
+.book-form h2 {
+  margin-bottom: 15px;
+  color: #c9a84c;
+}
+
+.book-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+.book-form input::placeholder {
+  color: #555;
+}
+
+.book-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #c9a84c;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.book-form button:hover {
+  background-color: #b8943e;
+}
+
+/* i learned media query makes it work on mobile too */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-right img {
+    width: 100%;
+  }
+  .booking {
+    flex-direction: column;
+  }
+  .nav-links {
+    display: none;
+  }
+}

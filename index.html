@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean & Fresh Laundry</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- i am using emailjs to send emails -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="logo">CleanFresh</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="user-name">Raj Kumar</div>
+  </nav>
+
+  <!-- hero section -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <h1>Best Laundry Service In Town</h1>
+      <p>We wash, dry and fold your clothes so you don't have to. Fast and affordable.</p>
+      <!-- i learned that smooth scroll works with scroll-behavior in css -->
+      <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">
+        Book a Service Today
+      </button>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=500" alt="laundry image" />
+    </div>
+  </section>
+
+  <!-- achievements section -->
+  <section class="achievements">
+    <div class="achievement">
+      <h2>15+</h2>
+      <p>Laundry Services</p>
+    </div>
+    <div class="achievement">
+      <h2>240+</h2>
+      <p>Happy Customers</p>
+    </div>
+    <div class="achievement">
+      <h2>2+</h2>
+      <p>Years of Experience</p>
+    </div>
+  </section>
+
+  <!-- booking section -->
+  <section class="booking" id="booking">
+
+    <!-- left side - services list -->
+    <div class="services-list">
+      <h2>Our Services</h2>
+
+      <div class="service-item">
+        <span>Wash & Fold</span>
+        <span>₹199</span>
+        <div class="btns">
+          <button onclick="addItem('Wash & Fold', 199)">Add Items</button>
+          <button onclick="removeItem('Wash & Fold', 199)">Remove Now</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <span>Dry Cleaning</span>
+        <span>₹349</span>
+        <div class="btns">
+          <button onclick="addItem('Dry Cleaning', 349)">Add Items</button>
+          <button onclick="removeItem('Dry Cleaning', 349)">Remove Now</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <span>Ironing</span>
+        <span>₹99</span>
+        <div class="btns">
+          <button onclick="addItem('Ironing', 99)">Add Items</button>
+          <button onclick="removeItem('Ironing', 99)">Remove Now</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <span>Blanket Wash</span>
+        <span>₹499</span>
+        <div class="btns">
+          <button onclick="addItem('Blanket Wash', 499)">Add Items</button>
+          <button onclick="removeItem('Blanket Wash', 499)">Remove Now</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <span>Shoe Cleaning</span>
+        <span>₹149</span>
+        <div class="btns">
+          <button onclick="addItem('Shoe Cleaning', 149)">Add Items</button>
+          <button onclick="removeItem('Shoe Cleaning', 149)">Remove Now</button>
+        </div>
+      </div>
+
+      <p class="hint">👆 Add items to the cart to place an order</p>
+    </div>
+
+    <!-- right side - cart and booking form -->
+    <div class="booking-right">
+
+      <!-- cart -->
+      <div class="cart">
+        <h2>Your Cart</h2>
+        <!-- i am using this div to show added items dynamically -->
+        <div id="cart-items">
+          <p id="empty-msg">No items added yet</p>
+        </div>
+        <hr />
+        <p class="total">Total: ₹<span id="total">0</span></p>
+      </div>
+
+      <!-- booking form -->
+      <div class="book-form">
+        <h2>Book Now</h2>
+        <input type="text" id="name" placeholder="Full Name" />
+        <input type="email" id="email" placeholder="Email" />
+        <input type="tel" id="phone" placeholder="Phone Number" />
+        <button onclick="bookNow()">Book Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
